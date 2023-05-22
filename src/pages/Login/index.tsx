@@ -6,9 +6,11 @@ import {PrimaryButton, EmailInput, PasswordInput} from 'components';
 import {useForm, Controller} from 'react-hook-form';
 import {ILoginForm} from './Login.structure';
 import {validateEmail} from 'utils/string';
+import {useNavigation} from '@react-navigation/native';
 
 export default function Login(): JSX.Element {
   const insets = useSafeAreaInsets();
+  const navigation = useNavigation();
   const {control, handleSubmit, watch} = useForm<ILoginForm>({
     defaultValues: {
       email: '',
@@ -85,7 +87,10 @@ export default function Login(): JSX.Element {
           />
           <View style={styles.signUpContainer}>
             <Text style={styles.signUpText}>Don't have an account? </Text>
-            <Pressable>
+            <Pressable
+              onPress={() => {
+                navigation.navigate('Register' as never);
+              }}>
               <Text style={styles.underline}>Sign up</Text>
             </Pressable>
             <Text style={styles.signUpText}> here</Text>

@@ -17,7 +17,7 @@ export default function PasswordInput(props: IPasswordInputProps) {
           {borderColor: props.errorMessage ? colors.error : colors['gray-300']},
         ]}>
         <TextInput
-          placeholder={props.placeholder || 'Digite aqui sua senha'}
+          placeholder={props.placeholder || 'Insert your password'}
           placeholderTextColor={colors['gray-300']}
           value={props.value}
           onChangeText={props.onChange}
@@ -34,7 +34,7 @@ export default function PasswordInput(props: IPasswordInputProps) {
       </View>
       {props.errorMessage && (
         <Text style={styles.errorMessage}>
-          {props.errorMessage || 'Senha inválida'}
+          {props.errorMessage || 'Invalid password'}
         </Text>
       )}
       <View

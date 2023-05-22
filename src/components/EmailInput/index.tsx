@@ -33,7 +33,7 @@ export default function EmailInput(props: IEmailInputProps) {
         ]}>
         <TextInput
           autoCapitalize="none"
-          placeholder="Digite aqui seu e-mail"
+          placeholder="Insert your e-mail"
           placeholderTextColor={colors['gray-300']}
           keyboardType="email-address"
           value={props.value}
