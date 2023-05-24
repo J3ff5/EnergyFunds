@@ -1,5 +1,6 @@
 const colors = {
   cta: '#770FDF',
+  'cta-light': '#F7EFFF',
   textColor: '#000000',
   'gray-100': '#F4F4F4',
   'gray-200': '#E0E0E0',

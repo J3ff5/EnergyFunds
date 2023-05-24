@@ -7,10 +7,13 @@ import {useForm, Controller} from 'react-hook-form';
 import {ILoginForm} from './Login.structure';
 import {validateEmail} from 'utils/string';
 import {useNavigation} from '@react-navigation/native';
+import {useDispatch} from 'react-redux';
+import {login} from '@/redux/userSlice';
 
 export default function Login(): JSX.Element {
   const insets = useSafeAreaInsets();
   const navigation = useNavigation();
+  const dispatch = useDispatch();
   const {control, handleSubmit, watch} = useForm<ILoginForm>({
     defaultValues: {
       email: '',
@@ -24,7 +27,8 @@ export default function Login(): JSX.Element {
   const [disabled, setDisabled] = React.useState(true as boolean);
 
   const onSubmit = (data: ILoginForm) => {
-    console.log(data);
+    dispatch(login(data.email));
+    navigation.navigate('Home' as never);
   };
 
   React.useEffect(() => {

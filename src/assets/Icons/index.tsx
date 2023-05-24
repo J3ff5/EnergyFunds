@@ -39,19 +39,22 @@ import PixIcon from './PixIcon';
 import PlusIcon from './PlusIcon';
 import QRCodeIcon from './QRCodeIcon';
 import RandomIcon from './RandomIcon';
-import ReceiptLongIcon from './ReceiptLong';
 import RoundedChangeIcon from './RoundedChangeIcon';
 import RoundedPlusIcon from './RoundedPlusIcon';
 import SearchIcon from './SearchIcon';
 import ShareIcon from './ShareIcon';
 import ShopIcon from './ShopIcon';
-import SmsIcon from './SmsIcon';
 import SunIcon from './SunIcon';
 import TipIcon from './TipIcon';
 import TipIconOutside from './TipIconOutside';
-import TransferIcon from './TransferIcon';
 import TrashIcon from './TrashIcon';
 import WaterDropIcon from './WaterDropIcon';
+import UserIcon from './UserIcon';
+import NotificationIcon from './NotificationIcon';
+import TopRightArrowIcon from './TopRightArrowIcon';
+import BottomRightArrowIcon from './BottomRightArrowIcon';
+import WindIcon from './WindIcon';
+import LeafIcon from './LeafIcon';
 
 /**
  * @description Component to render all svg icons
@@ -83,7 +86,6 @@ export default function Icons({size, color, name}: IIconsProps) {
   };
 
   const HashIcons: IHashIcons = {
-    'receipt-long-icon': <ReceiptLongIcon {...iconsProps} />,
     'bulletList-icon': <BulletListIcon {...iconsProps} />,
     'help-outline': <HelpOutline {...iconsProps} />,
     'claro-logo': <ClaroLogo {...iconsProps} />,
@@ -123,17 +125,21 @@ export default function Icons({size, color, name}: IIconsProps) {
     tip: <TipIcon {...iconsProps} />,
     'tip-outside': <TipIconOutside {...iconsProps} />,
     demography: <DemographyIcon {...iconsProps} />,
-    transfer: <TransferIcon {...iconsProps} />,
     plus: <PlusIcon {...iconsProps} />,
     email: <EmailIcon {...iconsProps} />,
     phone: <PhoneIcon {...iconsProps} />,
     random: <RandomIcon {...iconsProps} />,
     'bullet-option': <BulletOptionIcon {...iconsProps} />,
     share: <ShareIcon {...iconsProps} />,
-    sms: <SmsIcon {...iconsProps} />,
     'water-drop': <WaterDropIcon {...iconsProps} />,
     sun: <SunIcon {...iconsProps} />,
     moon: <MoonIcon {...iconsProps} />,
+    user: <UserIcon {...iconsProps} />,
+    notification: <NotificationIcon {...iconsProps} />,
+    'top-right-arrow': <TopRightArrowIcon {...iconsProps} />,
+    'bottom-right-arrow': <BottomRightArrowIcon {...iconsProps} />,
+    wind: <WindIcon {...iconsProps} />,
+    leaf: <LeafIcon {...iconsProps} />,
   };
 
   return HashIcons[name] || null;
